@@ -1,10 +1,31 @@
 import { html, fixture, expect } from '@open-wc/testing';
-import Sinon, { stub } from 'sinon';
+import Sinon, { fakeServer } from 'sinon';
 import '../src/LoanBasicDetails/BasicDetails.js';
+
+// const apiUrl = /\/loanfeapi.herokuapp.com/calculate-emi/
 
 describe('Basic details', async () => {
   // Write test cases inside this block
-  // refer basic-details.js files
+  // refer basic-details.js files\
+  // const cType = {'Content-Type': 'application/json'};
+  // const mocks = {};
+  // let server, messages;
+
+ 
+  // mocks.add_data = {
+  //   "name": "Personal Loan",
+  //   "amount": "10,000.00",
+  //   "period": "2"
+  // };
+  // server = fakeServer.create();
+  // server.respondImmediately = true;
+
+  // it('checks api call', async () => {
+  //   server.respondWith(apiUrl, [200,cType]);
+  //   const {res} = await fetch(mocks.add_data);
+  //   expect(res).to.be.true;
+  // })
+
   it('checks form', async () => {
     const el = await fixture(html `<basic-details></basic-details>`);
     const form = el.shadowRoot.querySelectorAll('lion-form');
